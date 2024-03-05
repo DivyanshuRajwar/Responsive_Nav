@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    user-select: none;
+}
+.wrapper{
+    width: 100%;
+    height:100%;
+    background: url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(2px); */
+    z-index: -1;
+    /* position: relative; */
+
+}
+nav{
+    width: 100%;
+    height: 80px;  
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+    color: #fff;
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.iteam{
+    color: #fff;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    font-family:Roboto;
+}
+.menu_icon{
+    display: none;
+}
+.media_nav{
+    color: #fff;
+    z-index: 2;
+    display: none;
+    /* position: absolute; */
+}
+.overlayer{
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #fff;
+    /* position: absolute; */
+    top: 80px;
+    z-index: 0;
+    display: none;
+    pointer-events: none;
+}
+.cross{
+    display: none;
+}
+.content{
+    position: absolute;
+    /* background-color: #fff; */
+    width: 40vw; 
+    height: 34vh;
+    left: 25vw;
+    top: 35vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.content pre{
+    font-size: 45px;
+    color: #fff;
+    font-weight: 800;
+}
+
+@media (max-width:600px){
+    .wrapper{
+        width: 100vw;
+        height: 100vh;
+    }
+    .iteam{
+        display: none;
+    }
+    nav{
+        height: 6vh;
+        border-radius: 5px;
+        padding: 0 2.5vh;
+    }
+    .menu_icon button{
+        width: 30px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2.5vh;
+    }
+    .menu_icon{
+        /* display: block;
+         */
+         display: flex;
+        color: #fff;
+        font-size: 2.8vh;
+       
+    }
+    .logo{
+        font-size: 2.8vh;
+    }
+    
+    .media_nav{
+        display: block;
+        width: 60vw;
+        height:40vh ;
+        margin-left: 40vw;
+        background-color: #c9c4c446;
+        box-shadow: 0 4px 30px rgba(97, 94, 94, 0.5);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: absolute;
+        z-index: 10;
+        display: none;
+    }
+    .media_iteam{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        font-size: 20px;
+        color: #fff;
+        padding: 20px 15px;
+    }
+    .media_iteam span{
+        display: flex;
+        gap: 15px;
+    }
+    .overlayer{
+        height: calc(100vh - 6vh);
+        top: 0;
+        display: block;
+        z-index: 0;
+        position: relative;
+        background-color: #000000a2;
+        display: none;
+    }
+    .open_overlay{
+        display: block;
+        pointer-events: initial;
+    }
+    .open_menu{
+        display: block;
+    }
+    
+    .cross_icon{
+        color: #fff;
+        font-size: 2.8vh;
+        visibility: hidden;
+    }
+    .dot_icon{
+
+        color: #fff;
+        font-size: 2.8vh;
+        /* visibility: hidden; */
+    }
+    .hide_dot{
+        visibility: hidden;
+    }
+    .show_cross{
+        visibility: visible;
+    }
+    .content{
+        width: 100%;
+        left: -10px;
+        top:30vh;
+    }
+    .content pre{
+        font-weight: 900;
+        font-size: 3.8vw;
+    }
+}
